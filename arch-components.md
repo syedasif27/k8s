@@ -11,27 +11,7 @@ A Kubernetes cluster consists of:
 
 ## High-Level Architecture Diagram
 
-```
-                     +----------------------+
-                     |     Control Plane    |
-                     |----------------------|
-kubectl / CI/CD ---> |  kube-apiserver      |
-                     |  kube-scheduler      |
-                     |  controller-manager  |
-                     |  etcd                |
-                     +----------+-----------+
-                                |
-              +-----------------+------------------+
-              |                 |                  |
-        +-----v------+     +----v-------+     +----v-------+
-        | Worker 1   |     | Worker 2    |     | Worker 3    |
-        |------------|     |-------------|     |-------------|
-        | kubelet    |     | kubelet     |     | kubelet     |
-        | kube-proxy |     | kube-proxy  |     | kube-proxy  |
-        | runtime    |     | runtime     |     | runtime     |
-        | Pods       |     | Pods        |     | Pods        |
-        +------------+     +-------------+     +-------------+
-```
+![Kubernetes Cluster Architecture](kubernetes-cluster-architecture.svg)
 
 ---
 
